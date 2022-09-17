@@ -1,0 +1,6 @@
+mx\com\axity\persistence\KeyboardDAO.class
+mx\com\axity\persistence\UserDAO.class
+mx\com\axity\persistence\MouseDAO.class
+mx\com\axity\persistence\MonitorDAO.class
+mx\com\axity\persistence\OrderDAO.class
+mx\com\axity\persistence\ComputerDAO.class

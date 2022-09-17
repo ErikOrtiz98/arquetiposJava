@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/computers
+    username: postgres
+    password: practiceArquetype
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    show-sql: true
+  application:
+    name: computer-service
+  profiles: qa
+
+server:
+  port: 8090
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${APIMANAGER_SVC_SERVICE_HOST}:${APIMANAGER_SVC_PORT_8000_TCP_PORT}/eureka
+  instance:
+    leaseRenewalIntervalInSeconds: 5   
+    preferIpAddress: true

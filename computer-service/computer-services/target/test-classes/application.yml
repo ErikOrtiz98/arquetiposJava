@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    #url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:postgresql://localhost:5432/computers
+    username: postgres
+    password: practiceArquetype
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: always
+  profiles:
+    active: h2db
