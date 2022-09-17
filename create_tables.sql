@@ -51,10 +51,10 @@ CREATE TABLE computer
     idcomputer INTEGER PRIMARY KEY NOT NULL DEFAULT nextval('computer_seq'),
     brand VARCHAR(100) NOT NULL,
 	serialnumber INTEGER NOT NULL UNIQUE,
-	idorder INTEGER NULL,
-    idkeyboard INTEGER NOT NULL,
-	idmouse INTEGER NOT NULL,
-	idmonitor INTEGER NOT NULL
+	idorder INTEGER NOT NULL REFERENCES order(idorder),
+    idkeyboard INTEGER NOT NULL REFERENCES keyboards(idkeyboard),
+	idmouse INTEGER NOT NULL REFERENCES mouses(idmouse),
+	idmonitor INTEGER NOT NULL REFERENCES monitors(idmonitor)
 	
 );
 
